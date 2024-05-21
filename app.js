@@ -1,8 +1,11 @@
-// JavaScript para la página web (en este caso no se necesita ninguna interacción)
 window.addEventListener('scroll', function() {
     var scrollPos = window.scrollY;
-    var background = document.querySelector('.strix');
+    var header = document.querySelector('header');
     
-    // Modifica la opacidad del fondo en función del desplazamiento
-    background.style.opacity = (scrollPos / window.innerHeight).toFixed(2);
+    // Cambia el color de fondo del encabezado en función del desplazamiento
+    if (scrollPos > 100) {
+        header.style.backgroundColor = '#555';
+    } else {
+        header.style.backgroundColor = '#333';
+    }
 });
